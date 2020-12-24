@@ -2,11 +2,21 @@
 server:
   port: 2001
 
+spring:
+  security:
+    user:
+      name: test
+      password: test
+
 eureka:
+  server:
+    enable-self-preservation: true
+    peer-node-read-timeout-ms: 300
   instance:
     hostname: eureka1.com
+    prefer-ip-address: true
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka2.com:2002/eureka/
+      defaultZone: http://test:test@127.0.0.1:2002/eureka/

@@ -2,15 +2,15 @@
 server:
   port: 3001
 
-
 eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: consume-first
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka1.com:2001/eureka/,http://eureka2.com:2002/eureka/
-#    availability-zones:
-#      zone1: http://eureka1.com:2001/eureka/
+      defaultZone: http://test:test@127.0.0.1:2002/eureka/,http://test:test@127.0.0.1:2001/eureka/
 ###应用名称
 spring:
   application:
