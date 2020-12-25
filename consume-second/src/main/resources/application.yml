@@ -1,0 +1,18 @@
+
+##https://github.com/wangzhen320909/Eureka_New_2020.git
+server:
+  port: 3002
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: consume-second
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://test:test@127.0.0.1:2002/eureka/,http://test:test@127.0.0.1:2001/eureka/
+###Ó¦ÓÃÃû³Æ
+spring:
+  application:
+    name: consume-second
